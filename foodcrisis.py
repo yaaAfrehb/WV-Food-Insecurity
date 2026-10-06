@@ -40,7 +40,9 @@ plt.ylabel("Food Insecurity % in 2023")
 plt.xlabel("RUCC rankings: 1-3 = Urban. 4-9 = Rural")
 plt.grid(True)
 plt.title("WV Food Insecurity Percentages in 2023 ")
-plt.show()
+
+plt.savefig("my_graph.png", dpi=300, bbox_inches="tight")
+
     
 # bar graph
 plt.figure(figsize=(18,6))
@@ -56,4 +58,5 @@ plt.xlabel("County")
 plt.ylabel("Food Insecurity %")
 plt.title("WV Food Insecurity % by County in 2023")
 plt.tight_layout()
-plt.show()
+
+plt.savefig("my_graph.png", dpi=300, bbox_inches="tight")
