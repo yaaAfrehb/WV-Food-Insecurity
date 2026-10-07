@@ -5,7 +5,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 # The GWCutilities has functions to help format data printed to the console
 import GWCutilities as util
-import streamlit as st
 
 # Read a comma separated values (CSV) files into a variable
 # as a pandas DataFrame
