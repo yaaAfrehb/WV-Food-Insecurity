@@ -28,4 +28,7 @@ pip install -r requirements.txt
   ```bash
   foodcrisis.py
   ```
-    
+Demo Link:
+```bash
+https://wv-food-insecurity-952zr92aplcrxpxbyaeopa.streamlit.app
+```
