@@ -30,34 +30,35 @@ print("---------------------------------------")
 
 #yoooo
 
+fig1, ax1 = plt.subplots()
 
 #urban
-plt.scatter(x = "RUCC", y = "Food Insecurity %", data= urban_counties , color = "blue")
+ax1.scatter(x = "RUCC", y = "Food Insecurity %", data= urban_counties , color = "blue")
 
 #rural
-plt.scatter(x = "RUCC", y = "Food Insecurity %", data = rural_counties, color = "red")
+ax1.scatter(x = "RUCC", y = "Food Insecurity %", data = rural_counties, color = "red")
 
-plt.ylabel("Food Insecurity % in 2023")
-plt.xlabel("RUCC rankings: 1-3 = Urban. 4-9 = Rural")
-plt.grid(True)
-plt.title("WV Food Insecurity Percentages in 2023 ")
+ax1.y_label("Food Insecurity % in 2023")
+ax1.x_label("RUCC rankings: 1-3 = Urban. 4-9 = Rural")
+ax1.grid(True)
+ax1.set_title("WV Food Insecurity Percentages in 2023 ")
 
-st.pyplot(fig)
+st.pyplot(fig1)
 
     
 # bar graph
-plt.figure(figsize=(18,6))
+fig2, ax2 = plt.subplots(figsize=(18,6))
 fdwv = fdwv.sort_values(by = "Food Insecurity %")
 
 bar_colors = ['blue' if rucc <= 3 else 'red' for rucc in fdwv['RUCC']]
 
-plt.bar(fdwv['County'], fdwv['Food Insecurity %'], color = bar_colors)
+ax2.bar(fdwv['County'], fdwv['Food Insecurity %'], color = bar_colors)
 
 
-plt.xticks(rotation=90)
-plt.xlabel("County")
-plt.ylabel("Food Insecurity %")
-plt.title("WV Food Insecurity % by County in 2023")
+ax2.set_xticklabels(rotation=90)
+plt.set_xlabel("County")
+plt.set_ylabel("Food Insecurity %")
+plt.set_title("WV Food Insecurity % by County in 2023")
 plt.tight_layout()
 
 st.pyplot(fig2)
