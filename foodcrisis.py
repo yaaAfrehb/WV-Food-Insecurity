@@ -38,8 +38,8 @@ ax1.scatter(x = "RUCC", y = "Food Insecurity %", data= urban_counties , color = 
 #rural
 ax1.scatter(x = "RUCC", y = "Food Insecurity %", data = rural_counties, color = "red")
 
-ax1.y_label("Food Insecurity % in 2023")
-ax1.x_label("RUCC rankings: 1-3 = Urban. 4-9 = Rural")
+ax1.set_ylabel("Food Insecurity % in 2023")
+ax1.set_xlabel("RUCC rankings: 1-3 = Urban. 4-9 = Rural")
 ax1.grid(True)
 ax1.set_title("WV Food Insecurity Percentages in 2023 ")
 
