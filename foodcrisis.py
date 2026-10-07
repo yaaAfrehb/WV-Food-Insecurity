@@ -56,9 +56,9 @@ ax2.bar(fdwv['County'], fdwv['Food Insecurity %'], color = bar_colors)
 
 
 ax2.tick_params(axis ='x', rotation=90)
-plt.set_xlabel("County")
-plt.set_ylabel("Food Insecurity %")
-plt.set_title("WV Food Insecurity % by County in 2023")
+ax2.set_xlabel("County")
+ax2.set_ylabel("Food Insecurity %")
+ax2.set_title("WV Food Insecurity % by County in 2023")
 plt.tight_layout()
 
 st.pyplot(fig2)
