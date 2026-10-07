@@ -55,7 +55,7 @@ bar_colors = ['blue' if rucc <= 3 else 'red' for rucc in fdwv['RUCC']]
 ax2.bar(fdwv['County'], fdwv['Food Insecurity %'], color = bar_colors)
 
 
-ax2.set_xticklabels(rotation=90)
+ax2.tick_params(axis ='x', rotation=90)
 plt.set_xlabel("County")
 plt.set_ylabel("Food Insecurity %")
 plt.set_title("WV Food Insecurity % by County in 2023")
