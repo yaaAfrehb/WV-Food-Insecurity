@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 # The GWCutilities has functions to help format data printed to the console
 import GWCutilities as util
+import streamlit as st
 
 # Read a comma separated values (CSV) files into a variable
 # as a pandas DataFrame
@@ -41,7 +42,7 @@ plt.xlabel("RUCC rankings: 1-3 = Urban. 4-9 = Rural")
 plt.grid(True)
 plt.title("WV Food Insecurity Percentages in 2023 ")
 
-plt.savefig("my_graph.png", dpi=300, bbox_inches="tight")
+st.pyplot(fig)
 
     
 # bar graph
@@ -59,4 +60,4 @@ plt.ylabel("Food Insecurity %")
 plt.title("WV Food Insecurity % by County in 2023")
 plt.tight_layout()
 
-plt.savefig("my_graph.png", dpi=300, bbox_inches="tight")
+st.pyplot(fig2)
